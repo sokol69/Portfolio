@@ -1,0 +1,39 @@
+extends ../base
+
+block head
+	title Мои работы
+block content
+	- var name = 'Дмитрий Соколов'
+		.container
+			header.header
+				.header__top
+					.header__socials
+					.header__hamburger
+				.header__center
+					.header__center_img
+						img.header__center_img_ava(src=require("./img/avag.jpg"))
+					h3.header__center_title #{name}
+					.header__center_text Личный сайт веб-разработчика
+			.content
+				section.works
+					h1.works__title МОИ РАБОТЫ
+				section.reviews
+					h1.reviews__tile ЧТО ОБО МНЕ ГОВОРЯТ
+			footer.footer
+				.footer__top
+					.footer__top_left
+						nav.footer__nav
+							ul.footer__nav_list
+								li.footer__nav_list_item Мои работы
+								li.footer__nav_list_item Обо мне
+								li.footer__nav_list_item Блог
+								li.footer__nav_list_item Авторизация
+					.footer__top_right
+						.footer__social
+								ul.footer__social_list
+									li.footer__social_list_item
+									li.footer__social_list_item
+									li.footer__social_list_item
+				.footer__bottom
+					.footer__bottom_left Я веб-разработчик из Твери и этот сайт я делал в рамках обучения в Школе онлайн образования LoftSchool
+					.footer__bottom_right &copy;Соколов Дмитрий | создано с любовью в loftschool | 2017

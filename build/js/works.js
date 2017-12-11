@@ -1,0 +1,1 @@
+webpackJsonp([1],{8:function(e,n,o){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var s=o(0),c=(o.n(s),o(9));o.n(c);console.log("in works.js")},9:function(e,n){}},[8]);

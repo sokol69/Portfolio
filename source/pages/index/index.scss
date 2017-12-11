@@ -1,0 +1,168 @@
+/*@font-face {
+	font-family: Roboto;
+	src: url(/fonts/Roboto-Medium.ttf);
+}*/
+
+*{
+	box-sizing: border-box;
+}
+
+html,body{
+	font: 100%/1.5em;
+	font-family:'Roboto', sans-serif;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: url(../../../images/background/bg.jpg) no-repeat;
+	background-size: cover;
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+.container{
+	height: 100%;
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.header{
+	display: flex;
+	justify-content: flex-end;
+
+}
+
+.content {
+	display: flex;
+	min-height: calc(100vh - 7vh);
+	flex: 1 0 auto;
+}
+
+
+.singin{
+	width: 12vw;
+	height: 5vh;
+	border: 1px solid white;
+	border-radius: 5px;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	margin-top: 20px;
+}
+
+.welcome{
+	height: 44vh;
+	width: 24vw;
+	background: rgba(255, 255, 255, .7);
+	margin: auto;
+	border-radius: 7px;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	padding-top: 30px;
+	overflow: hidden;
+}
+
+.welcome__img{
+	display: flex;
+	justify-content: center;
+}
+
+.welcome__img_ava{
+	display: flex;
+	width: 40%;
+	height: 40%;
+	border-radius: 50%;
+	justify-content: center;
+}
+
+.welcome__text{
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+
+.welcome__title{
+	text-align: center;
+	color: #34454e;
+	margin-bottom: 10px;
+	padding-top: 20px;
+}
+
+.welcome__title_small{
+	text-align: center;
+	color: #546570;
+	font-size: 14px;
+}
+
+.welcome__socials_icon{
+	color: #00b69e;
+}
+
+.nav__list{
+	display: flex;
+	justify-content: space-around;
+	color: white;
+	padding: 0;
+	opacity: .7;
+	margin-bottom: 0;
+	font-weight: bold;
+}
+
+.nav__list_item{
+	text-align: center;
+	width: 33.33%;
+	height: 5vh;
+	background-color: #00b69e;
+	line-height: 5vh;
+}
+
+.nav__list_item:hover{
+	background-color: #008f83;
+	cursor: pointer;
+}
+
+.item_m{
+	margin-right: 1px;
+}
+
+.nav__list_link{
+	display: block;
+	height: 100%;
+}
+
+.welcome__socials{
+	display: flex;
+	justify-content: center;
+	height: 10vh;
+}
+
+.welcome__socials_icon{
+	margin: auto 20px;
+}
+
+.footer{
+	color: gray;
+	height: 7vh;
+	width: 100%;
+	flex: 0 0 auto;
+}
+
+.footer__text{
+	font-size: 12px;
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+}
