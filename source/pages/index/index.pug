@@ -1,0 +1,38 @@
+extends ../base
+
+block head
+	title Добро пожаловать!
+block content
+	- var name = 'Дмитрий Соколов'
+	.container
+		header.header
+			.singin Авторизоваться
+		.content
+			section.welcome
+				.welcome__img
+					img.welcome__img_ava(src=require("./img/avag.jpg"))
+				.welcome__text
+					h3.welcome__title #{name}
+					.welcome__title_small Личный сайт веб-разработчика
+				.welcome__socials
+					span.welcome__socials_icon
+						a(href='#')
+							img(src=require("./img/vk.svg"))
+					span.welcome__socials_icon
+						a(href='#')
+							img(src=require("./img/github.svg"))
+					span.welcome__socials_icon
+						a(href='#')
+							img(src=require("./img/in.svg"))
+				nav.nav
+					ul.nav__list
+						li.nav__list_item.item_m
+							a.nav__list_link(href='works.html') Мои работы
+						li.nav__list_item.item_m
+							a.nav__list_link(href='about.html') Обо мне
+						li.nav__list_item
+							a.nav__list_link(href='blog.html') Блог
+		footer.footer
+			.footer__text &copy;Соколов Дмитрий | создано с любовью в loftschool | 2017
+
+

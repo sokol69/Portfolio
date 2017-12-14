@@ -1,0 +1,83 @@
+extends ../base
+
+block head
+	title Главная страница
+block content
+	section.section.hero
+		header.head
+			ul.socials
+				li.socials__item
+					a.socials__link(href='#')
+						img.socials__icon(src=require("./img/vk.svg"))
+				li.socials__item
+					a.socials__link(href='#')
+						img.socials__icon(src=require("./img/github.svg"))
+				li.socials__item
+					a.socials__link(href='#')
+						img.socials__icon(src=require("./img/in.svg"))
+			.head__menu
+				img.head__menu_icon(src=require("./img/hamburger.svg"))
+		.hero__title
+			.section-title
+				img.section-title__pic(src=require("./img/avag.jpg"))
+			.hero__user.user
+				h3.user__name Дмитрий Соколов
+				.user__data Личный сайт веб-разработчика
+		.hero__arrow.arrow-down
+			img.arrow-down__pic(src=require("./img/arrow_down.svg"))
+
+	section.section.about
+		.about__left
+			.about__triangle.about__triangle_left
+			h1.about__left_title Обо мне
+			.user-desc
+				img.user-desc__image(src=require("./img/avag.jpg"))
+				.block-subtitle.user-desc__title Кто я
+				.text-block.user-desc__text
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, sint quaerat architecto iusto incidunt enim a ipsam velit hic et veniam, tempore cum veritatis earum error expedita provident eos. Quis?
+					p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor commodi natus quasi accusantium odit ipsa perspiciatis eos similique quaerat exercitationem iste quidem tempore harum cumque reprehenderit, minima fugit iure numquam.
+		.about__right
+			.about__triangle.about__triangle_right
+			.block-subtitle.about__right-title Чем я могу быть <br> вам полезен
+			.text-block.about__right-desc
+				p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку. 
+			.about__right-content
+				ul.skills-list
+				each item in ['Frontend', 'Backend', 'Workflow']
+					li.skills-list__item
+						.skills-row
+							.skills-row__title #{item}
+							ul.skills-row__list
+								li.skills-row__item
+									.skill
+										svg.skill__circle
+										.skill__title
+	section.section.map
+		.google-map
+		.map__data
+			.contacts
+				.contacts__title
+					.block-subtitle Контакты
+				ul.contacts__list
+					li.contacts__item skype
+					li.contacts__item mail
+					li.contacts__item phone
+					li.contacts__item adress
+	footer.footer
+		.footer__top
+			.footer__top_left
+				nav.footer__nav
+					ul.footer__nav_list
+						li.footer__nav_list_item Мои работы
+						li.footer__nav_list_item Обо мне
+						li.footer__nav_list_item Блог
+						li.footer__nav_list_item Авторизация
+			.footer__top_right
+				.footer__social
+						ul.footer__social_list
+							li.footer__social_list_item
+							li.footer__social_list_item
+							li.footer__social_list_item
+		.footer__bottom
+			.footer__bottom_left Я веб-разработчик из Твери и этот сайт я делал в рамках обучения в Школе онлайн образования LoftSchool
+			.footer__bottom_right &copy;Соколов Дмитрий | создано с любовью в loftschool | 2017
