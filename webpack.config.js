@@ -76,14 +76,22 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     publicPath: '../',
                     use: ['css-loader','sass-loader'],
+<<<<<<< HEAD
 				})
+=======
+                })
+>>>>>>> dca726e43e80aa1cab9069667f4f0be4ad823970
             },
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: 'css-loader'
+<<<<<<< HEAD
 				})
+=======
+                })
+>>>>>>> dca726e43e80aa1cab9069667f4f0be4ad823970
             },
             {
                 test: /\.js$/,
@@ -107,7 +115,11 @@ module.exports = {
 				options: {
 					limit: 10000,
 					name: '[name].[ext]?[hash]',
+<<<<<<< HEAD
 					outputPath: 'fonts/[name].[ext]'
+=======
+					outputPath: 'fonts/',
+>>>>>>> dca726e43e80aa1cab9069667f4f0be4ad823970
 				}
 			}
         ]
