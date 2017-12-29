@@ -4,13 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-<<<<<<< HEAD
     "build": "webpack",
     "start": "webpack-dev-server",
-=======
-    "start": "webpack",
-    "dev": "webpack-dev-server",
->>>>>>> dca726e43e80aa1cab9069667f4f0be4ad823970
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

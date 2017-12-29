@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @font-face {
 	font-family: "Roboto";
 	src: url(/source/fonts/Roboto-Regular.ttf);
@@ -9,18 +8,12 @@
 	src: url(/source/fonts/BERNIERDistressed-Regular.otf);
 }
 
-=======
->>>>>>> dca726e43e80aa1cab9069667f4f0be4ad823970
 *{
 	box-sizing: border-box;
 }
 
 html,body{
-<<<<<<< HEAD
 	font: 16px/1.5em;
-=======
-	font: 100%/1.5em;
->>>>>>> dca726e43e80aa1cab9069667f4f0be4ad823970
 	font-family:'Roboto', sans-serif;
 	width: 100%;
 	height: 100%;
@@ -37,7 +30,6 @@ a{
 	color: white;
 }
 
-<<<<<<< HEAD
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -561,31 +553,4 @@ a{
 	.about__right{
 		height: 950px;
 	}
-=======
-.container{
-	height: 100%;
-	width: 90%;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-}
-
-.header{
-	display: flex;
-	justify-content: flex-end;
-
-}
-
-.header__center_img{
-	display: flex;
-	justify-content: center;
-}
-
-.header__center_img_ava{
-	display: flex;
-	width: 15%;
-	height: 15%;
-	border-radius: 50%;
-	justify-content: center;
->>>>>>> dca726e43e80aa1cab9069667f4f0be4ad823970
 }
