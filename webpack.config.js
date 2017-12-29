@@ -76,14 +76,14 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     publicPath: '../',
                     use: ['css-loader','sass-loader'],
-                })
+				})
             },
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: 'css-loader'
-                })
+				})
             },
             {
                 test: /\.js$/,
@@ -107,7 +107,7 @@ module.exports = {
 				options: {
 					limit: 10000,
 					name: '[name].[ext]?[hash]',
-					outputPath: 'fonts/',
+					outputPath: 'fonts/[name].[ext]'
 				}
 			}
         ]

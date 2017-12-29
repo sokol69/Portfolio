@@ -3,37 +3,133 @@ extends ../base
 block head
 	title Мои работы
 block content
-	- var name = 'Дмитрий Соколов'
+	.wrapper
 		.container
-			header.header
-				.header__top
-					.header__socials
-					.header__hamburger
-				.header__center
-					.header__center_img
-						img.header__center_img_ava(src=require("./img/avag.jpg"))
-					h3.header__center_title #{name}
-					.header__center_text Личный сайт веб-разработчика
-			.content
-				section.works
-					h1.works__title МОИ РАБОТЫ
-				section.reviews
-					h1.reviews__tile ЧТО ОБО МНЕ ГОВОРЯТ
-			footer.footer
-				.footer__top
-					.footer__top_left
-						nav.footer__nav
-							ul.footer__nav_list
-								li.footer__nav_list_item Мои работы
-								li.footer__nav_list_item Обо мне
-								li.footer__nav_list_item Блог
-								li.footer__nav_list_item Авторизация
-					.footer__top_right
-						.footer__social
-								ul.footer__social_list
-									li.footer__social_list_item
-									li.footer__social_list_item
-									li.footer__social_list_item
-				.footer__bottom
-					.footer__bottom_left Я веб-разработчик из Твери и этот сайт я делал в рамках обучения в Школе онлайн образования LoftSchool
-					.footer__bottom_right &copy;Соколов Дмитрий | создано с любовью в loftschool | 2017
+			section.section.hero
+				header.head
+					ul.socials
+						li.socials__item
+							a.socials__link(href='#')
+								img.socials__icon(src=require("./img/vk.svg"))
+						li.socials__item
+							a.socials__link(href='#')
+								img.socials__icon(src=require("./img/github.svg"))
+						li.socials__item
+							a.socials__link(href='#')
+								img.socials__icon(src=require("./img/in.svg"))
+					.head__menu
+						img.head__menu_icon(src=require("./img/hamburger.svg"))
+				.hero__title
+					.section-title
+						img.section-title__pic(src=require("./img/avag.jpg"))
+					.hero__user.user
+						h2.user__name Дмитрий Соколов
+						.user__data Личный сайт веб-разработчика
+				.hero__arrow.arrow-down
+					img.arrow-down__pic(src=require("./img/arrow_down.svg"))
+
+			section.section.works
+				.triangle-box
+					svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="triangles")
+						polygon(class="triangle__left" points="0,0 0,86 500.8,86 500.8,75.5")
+						polygon(class="triangle__right" points="1000,0 1000,86 500,86 500,75.5")
+				.works__title_wrap
+					h1.works__title.title МОИ РАБОТЫ
+				.works-content
+					.slider__btn.btn-previous
+						span.icon-portf_arrow_down
+					ul.slider__list
+						li.slider__item.show
+							.works-content__left
+								.works-content__img
+							.works-content__right
+								.works-content__img
+								.works-content__title.subtitle Сайт школы онлайн <br> образования
+								.works-content__desc HTML, CSS, JavaScript
+								.works-content__site
+									.site__text Посмотреть сайт
+						li.slider__item
+							.works-content__left
+								.works-content__img
+							.works-content__right
+								.works-content__img
+								.works-content__title.subtitle Сайт школы онлайн <br> образования
+								.works-content__desc HTML, CSS, JavaScript
+								.works-content__site
+									.site__text Посмотреть сайт
+						li.slider__item
+							.works-content__left
+								.works-content__img
+							.works-content__right
+								.works-content__img
+								.works-content__title.subtitle Сайт школы онлайн <br> образования
+								.works-content__desc HTML, CSS, JavaScript
+								.works-content__site
+									.site__text Посмотреть сайт
+						li.slider__item
+							.works-content__left
+								.works-content__img
+							.works-content__right
+								.works-content__img
+								.works-content__title.subtitle Сайт школы онлайн <br> образования
+								.works-content__desc HTML, CSS, JavaScript
+								.works-content__site
+									.site__text Посмотреть сайт
+					.slider__btn.btn-next
+						span.icon-portf_arrow_down
+
+			section.section.reviews
+				h1.reviews__tile.title ЧТО ОБО МНЕ <br> ГОВОРЯТ
+				ul.reviews__list
+					li.reviews__item
+						img.reviews__quotes(src=require("./img/quotes.jpg"))
+						.reviews__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+						.reviews__autor
+							img.reviews__ava(src=require("./img/kovalchuk.jpg"), alt="Dmitriy Kovalchuk")
+							.autor__info
+								.reviews__name Ковальчук Дмитрий
+								.autor__status основатель Loftschool
+					li.reviews__item
+						img.reviews__quotes(src=require("./img/quotes.jpg"))
+						.reviews__text Этот код выдержит любые испытания. Только пожалуй, не загружается сайт на слишком старых браузерах!
+						.reviews__autor
+							img.reviews__ava(src=require("./img/sabancev.jpg"), alt="Vladimir Sabancev")
+							.autor__info
+								.reviews__name Сабанцев Владимир
+								.autor__status преподаватель
+				.form__wrap
+					.blur
+					.reviews__form
+						h2.form__title.subtitle  Связаться со мной
+						input.form__name(type="text" placeholder="Имя")
+						input.form__email(type="text" placeholder="Email")
+						textarea.form__message(name="message", cols="30", rows="10", placeholder="Ваше сообщение")
+						.reviews__btn
+							.form__btn.btn__send
+								.btn__text Отправить
+							.form__btn.btn__clear
+								.btn__text Очистить
+
+
+		footer.footer
+			.footer__top
+				.footer__top_left
+					nav.footer__nav
+						ul.footer__nav_list
+							li.footer__nav_list_item
+								a.nav__list_link(href='works.html') Мои работы
+							li.footer__nav_list_item
+								a.nav__list_link(href='about.html') Обо мне
+							li.footer__nav_list_item
+								a.nav__list_link(href='blog.html') Блог
+							li.footer__nav_list_item
+								a.nav__list_link(href='index.html') Авторизация
+				.footer__top_right
+					.footer__social
+							ul.footer__social_list
+								li.footer__social_list_item vk
+								li.footer__social_list_item github
+								li.footer__social_list_item in
+			.footer__bottom
+				.footer__bottom_left Я веб-разработчик из Твери и этот сайт я делал в рамках обучения в Школе онлайн образования LoftSchool
+				.footer__bottom_right &copy;Соколов Дмитрий | создано с любовью в loftschool | 2017

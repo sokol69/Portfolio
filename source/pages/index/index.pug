@@ -6,18 +6,19 @@ block content
 	- var name = 'Дмитрий Соколов'
 	.container
 		header.header
-			.singin Авторизоваться
+			.singin__box
+				.singin Авторизоваться
 		.content
 			section.welcome
 				.welcome__img
 					img.welcome__img_ava(src=require("./img/avag.jpg"))
 				.welcome__text
-					h3.welcome__title #{name}
+					h2.welcome__title #{name}
 					.welcome__title_small Личный сайт веб-разработчика
 				.welcome__socials
 					span.welcome__socials_icon
 						a(href='#')
-							img(src=require("./img/vk.svg"))
+							span.icon-vk
 					span.welcome__socials_icon
 						a(href='#')
 							img(src=require("./img/github.svg"))

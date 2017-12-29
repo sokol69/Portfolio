@@ -1,7 +1,12 @@
-/*@font-face {
-	font-family: Roboto;
-	src: url(/fonts/Roboto-Medium.ttf);
-}*/
+@font-face {
+	font-family: "Roboto";
+	src: url(/source/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Bernier";
+	src: url(/source/fonts/BERNIERDistressed-Regular.otf);
+}
 
 *{
 	box-sizing: border-box;
@@ -46,46 +51,56 @@ a{
 
 .content {
 	display: flex;
-	min-height: calc(100vh - 7vh);
+	min-height: calc(100vh - 8vh);
 	flex: 1 0 auto;
 }
 
-
-.singin{
-	width: 12vw;
-	height: 5vh;
+.singin__box{
+	display: flex;
+	width: 11.25rem;
+	height: 3.1rem;
 	border: 1px solid white;
-	border-radius: 5px;
+	border-radius: .3rem;
 	color: white;
 	text-align: center;
-	padding: 10px;
-	margin-top: 20px;
+	margin-top: 1.25rem;
+	z-index: 5;
+}
+
+.singin{
+	margin: auto;
+}
+
+.singin__box:hover{
+	background: #fff;
+	color: #55dbc5;
+	cursor: pointer;
 }
 
 .welcome{
-	height: 44vh;
-	width: 24vw;
+	height: 24.69rem;
+	width: 23.75rem;
 	background: rgba(255, 255, 255, .7);
 	margin: auto;
-	border-radius: 7px;
+	border-radius: .44rem;
 	display: flex;
 	flex-flow: column;
 	justify-content: space-between;
-	padding-top: 30px;
+	padding-top: 2rem;
 	overflow: hidden;
 }
 
 .welcome__img{
 	display: flex;
 	justify-content: center;
+	height: 8.44rem;
 }
 
 .welcome__img_ava{
 	display: flex;
-	width: 140px;
-	height: 135px;
+	width: 8.75rem;
+	height: 8.44rem;
 	border-radius: 50%;
-	justify-content: center;
 	max-width: 100%;	
 }
 
@@ -98,15 +113,14 @@ a{
 .welcome__title{
 	text-align: center;
 	color: #34454e;
-	margin-bottom: 10px;
-	padding-top: 20px;
+	margin: .4rem auto;
 }
 
 .welcome__title_small{
 	text-align: center;
 	color: #546570;
-	font-size: 14px;
-	padding-top: 10px;
+	font-size: .88rem;
+	padding: .63rem 0;
 }
 
 .welcome__socials_icon{
@@ -126,9 +140,9 @@ a{
 .nav__list_item{
 	text-align: center;
 	width: 33.33%;
-	height: 5vh;
+	height: 3.1rem;;
 	background-color: #00b69e;
-	line-height: 5vh;
+	line-height: 3.1rem;;
 }
 
 .nav__list_item:hover{
@@ -152,7 +166,7 @@ a{
 }
 
 .welcome__socials_icon{
-	margin: auto 20px;
+	margin: auto 1.25rem;
 }
 
 .footer{
@@ -163,8 +177,28 @@ a{
 }
 
 .footer__text{
-	font-size: 12px;
+	font-size: .75rem;
 	width: 50%;
 	margin: 0 auto;
 	text-align: center;
+}
+
+
+@media screen and (max-width: 770px){
+	.welcome{
+		width: 21.75rem;
+	}
+}
+
+@media screen and (max-width: 350px){
+	html{
+		font-size: 14px;
+	}
+	.header{
+		justify-content: center;
+	
+	}
+	.welcome{
+		height: 28.2rem;
+	}
 }
