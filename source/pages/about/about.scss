@@ -45,6 +45,17 @@ a{
 	display: flex;
 }
 
+.title{
+	font-family: 'Bernier', sans-serif;
+	font-size: 3.9rem;
+	margin: 4.3rem 0;
+}
+.subtitle{
+	font-family: 'Bernier', sans-serif;
+	font-size: 2.19rem;
+	margin: 2.5rem 0;
+}
+
 /*--------Hero-----------*/
 
 .hero{
@@ -120,7 +131,7 @@ a{
 
 
 .about{
-	height: 130vh;
+	height: 160vh;
 	color: rgb(52, 62, 66);
 	display: flex;
 	flex-direction: column;
@@ -164,21 +175,9 @@ a{
 	justify-content: start;
 }
 
-
-.block-subtitle{
-	font-size: 1.4rem;
-	font-weight: bold;
-	font-family: 'Bernier', sans-serif;
-}
-
 .text-block{
 	width: 27.8rem;
 	text-align: left;
-}
-
-.about__left_title{
-	font-family: 'Bernier', sans-serif;
-	margin-top: .5rem;
 }
 
 .user-desc{
@@ -189,12 +188,9 @@ a{
 	max-width: 100%;
 	width: 27.8rem;
 	height: 24.4rem;
-	margin: 2.2rem auto;
+	margin: 0 auto;
 }
 
-.about__right-title{
-	margin-top: .5rem;
-}
 
 .about__right-desc{
 	padding: 1.25rem;
@@ -317,7 +313,7 @@ a{
 	z-index: 5;
 	color: rgb(52, 62, 66);
 	width: 22rem;
-	height: 15.7rem;;
+	height: 19rem;;
 	background: rgba(255, 255, 255, 0.6);
 	border-radius: .5rem;
 	max-width: 430px;
@@ -419,22 +415,13 @@ a{
 /*--------Adaptive-----------*/
 @media screen and (max-width: 1150px){
 	.about{
-		height: 150vh;
+		height: 180vh;
 	}
 }
 
-@media screen and (max-width: 1055px){
+@media screen and (max-width: 1055px) {
 	.about{
-		height: 190vh;
-	}
-}
-
-@media screen and (max-width: 775px) {
-	html{
-		font-size: 14px;
-	}
-	.about{
-		height: 1500px;
+		height: 1900px;
 	}
 	.about__wrap{
 		flex-direction: column;
@@ -444,11 +431,11 @@ a{
 	}
 	.about__left{
 		width: 100%;
-		height: 700px;
+		height: 900px;
 	}
 	.about__right{
 		width: 100%;
-		height: 800px;
+		height: 1000px;
 		align-items: center;
 	}
 	.skills-list__item{
@@ -457,6 +444,12 @@ a{
 	.skills-row__list{
 		justify-content: center;
 		padding: 0;
+	}
+}
+
+@media screen and (max-width: 770px){
+	.map{
+		height: 120vh;
 	}
 	.footer{
 		height: 15.3rem;
@@ -484,22 +477,21 @@ a{
 }
 
 @media screen and (max-width: 563px){
+	html{
+		font-size: 14px;
+	}
 	.about{
-		height: 1500px;
+		height: 1800px;
 	}
 	.about__left{
-		height: 650px;
+		height: 800px;
 	}
 	.about__right{
-		height: 850px;
+		height: 1000px;
 	}
 }
 
 @media screen and (max-width: 450px) {
-	html{
-		font-size: 12px;
-	}
-
 	.about__left_title{
 		margin: 1rem auto;
 	}
@@ -543,14 +535,18 @@ a{
 	}
 }
 
-@media screen and (max-width: 345px){
+@media screen and (max-width: 400px){
 	.about{
-		height: 1600px;
+		height: 2000px;
 	}
 	.about__left{
-		height: 650px;
+		height: 800px;
 	}
 	.about__right{
-		height: 950px;
+		height: 1200px;
 	}
+}
+
+@media screen and (max-width: 345px){
+
 }

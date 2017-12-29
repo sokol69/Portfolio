@@ -461,16 +461,31 @@ input, textarea{
 	}
 	.works-content{
 		height: 100%;
-		flex-direction: column;
+		flex-direction: row;
+	}
+	.slider__list{
+		display: flex;
+		flex-direction: row;
+	}
+	.slider__item{
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: space-between;
+	}
+	.slider__item{
+		display: none;
+		width: 100%;
+	}
+	.show{
+		display: flex;
 	}
 	.works-content__left{
+		height: 50%;
 		width: 100%;
-		order: 1;
-		height: 60%;
 	}
 	.works-content__right{
 		width: 100%;
-		padding: 100px 0;
+		background: #eef2e7;
 	}
 	.reviews__list{
 		width: 100%;
@@ -508,8 +523,17 @@ input, textarea{
 	html{
 		font-size: 14px;
 	}
+	.works{
+		height: 750px;
+	}
+	.subtitle{
+		margin: 1rem 0;
+	}
+	.works-content__desc{
+		margin: 1rem 0;
+	}
 	.reviews{
-		height: 1350px;
+		height: 1600px;
 	}
 	.reviews__list{
 		height: 450px;

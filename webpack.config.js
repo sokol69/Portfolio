@@ -101,14 +101,17 @@ module.exports = {
                 }
 			},
 			{
-				test: /\.(eot|svg|ttf|woff|woff2)(\?.*)/,
-				loader: 'file-loader',
-				include: path.join(__dirname, 'source/fonts'),
-				options: {
-					limit: 10000,
-					name: '[name].[ext]?[hash]',
-					outputPath: 'fonts/[name].[ext]'
-				}
+				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+				include: path.join(__dirname, "source/fonts"),
+				use: [
+				  {
+					loader: "file-loader",
+					options: {
+					  name: "[name].[ext]",
+					  outputPath: "fonts/"
+					}
+				  }
+				]
 			}
         ]
     }
