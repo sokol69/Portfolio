@@ -10,15 +10,15 @@ block content
 					ul.socials
 						li.socials__item
 							a.socials__link(href='#')
-								img.socials__icon(src=require("./img/vk.svg"))
+								span.icon-vk.icon
 						li.socials__item
 							a.socials__link(href='#')
-								img.socials__icon(src=require("./img/github.svg"))
+								span.icon-github.icon
 						li.socials__item
 							a.socials__link(href='#')
-								img.socials__icon(src=require("./img/in.svg"))
+								span.icon-in.icon
 					.head__menu
-						img.head__menu_icon(src=require("./img/hamburger.svg"))
+						span.icon-hamburger
 				.hero__title
 					.section-title
 						img.section-title__pic(src=require("./img/avag.jpg"))
@@ -26,7 +26,7 @@ block content
 						h2.user__name Дмитрий Соколов
 						.user__data Личный сайт веб-разработчика
 				.hero__arrow.arrow-down
-					img.arrow-down__pic(src=require("./img/arrow_down.svg"))
+					span.icon-arrow_down
 
 			section.section.works
 				.triangle-box
@@ -34,52 +34,62 @@ block content
 						polygon(class="triangle__left" points="0,0 0,86 500.8,86 500.8,75.5")
 						polygon(class="triangle__right" points="1000,0 1000,86 500,86 500,75.5")
 				.works__title_wrap
-					h1.works__title.title МОИ РАБОТЫ
+					.works__title.title МОИ РАБОТЫ
 				.works-content
 					.slider__btn.btn-previous
-						span.icon-portf_arrow_down
-					ul.slider__list
-						li.slider__item.show
-							.works-content__left
-								.works-content__img
-							.works-content__right
-								.works-content__img
-								.works-content__title.subtitle Сайт школы онлайн <br> образования
-								.works-content__desc HTML, CSS, JavaScript
-								.works-content__site
-									.site__text Посмотреть сайт
-						li.slider__item
-							.works-content__left
-								.works-content__img
-							.works-content__right
-								.works-content__img
-								.works-content__title.subtitle Сайт школы онлайн <br> образования
-								.works-content__desc HTML, CSS, JavaScript
-								.works-content__site
-									.site__text Посмотреть сайт
-						li.slider__item
-							.works-content__left
-								.works-content__img
-							.works-content__right
-								.works-content__img
-								.works-content__title.subtitle Сайт школы онлайн <br> образования
-								.works-content__desc HTML, CSS, JavaScript
-								.works-content__site
-									.site__text Посмотреть сайт
-						li.slider__item
-							.works-content__left
-								.works-content__img
-							.works-content__right
-								.works-content__img
-								.works-content__title.subtitle Сайт школы онлайн <br> образования
-								.works-content__desc HTML, CSS, JavaScript
-								.works-content__site
-									.site__text Посмотреть сайт
+						span.icon-portf_arrow_down.prev#btn__prev
+					.slider__wrap
+						ul.slider__list#slider-list
+							li.slider__item.active
+								.works-content__left#work-1
+									.works-content__img
+								.works-content__right
+									.works-content__img
+									.works-content__title.subtitle Сайт школы онлайн <br> образования
+									.works-content__desc HTML, CSS, JavaScript
+									.works-content__site
+										.site__text
+											sapn.icon-link 
+											span Посмотреть сайт
+							li.slider__item
+								.works-content__left#work-2
+									.works-content__img
+								.works-content__right
+									.works-content__img
+									.works-content__title.subtitle Сайт web-студии <br> ITloft
+									.works-content__desc HTML, CSS, JavaScript
+									.works-content__site
+										.site__text
+											sapn.icon-link 
+											span Посмотреть сайт
+							li.slider__item
+								.works-content__left#work-3
+									.works-content__img
+								.works-content__right
+									.works-content__img
+									.works-content__title.subtitle Портал видеоуроков <br> и IT сообщество
+									.works-content__desc HTML, CSS, JavaScript
+									.works-content__site
+										.site__text
+											sapn.icon-link 
+											span Посмотреть сайт
+							li.slider__item
+								.works-content__left#work-4
+									.works-content__img
+								.works-content__right
+									.works-content__img
+									.works-content__title.subtitle Сайт школы йоги <br> ATMA YOGA
+									.works-content__desc HTML, CSS, JavaScript
+									.works-content__site
+										.site__text
+											sapn.icon-link 
+											span Посмотреть сайт
 					.slider__btn.btn-next
-						span.icon-portf_arrow_down
+						span.icon-portf_arrow_down.next#btn__next
 
 			section.section.reviews
-				h1.reviews__tile.title ЧТО ОБО МНЕ <br> ГОВОРЯТ
+				.reviews__title_wrap
+					.reviews__tile.title ЧТО ОБО МНЕ <br> ГОВОРЯТ
 				ul.reviews__list
 					li.reviews__item
 						img.reviews__quotes(src=require("./img/quotes.jpg"))
@@ -100,7 +110,7 @@ block content
 				.form__wrap
 					.blur
 					.reviews__form
-						h2.form__title.subtitle  Связаться со мной
+						.form__title.subtitle  Связаться со мной
 						input.form__name(type="text" placeholder="Имя")
 						input.form__email(type="text" placeholder="Email")
 						textarea.form__message(name="message", cols="30", rows="10", placeholder="Ваше сообщение")
@@ -127,9 +137,12 @@ block content
 				.footer__top_right
 					.footer__social
 							ul.footer__social_list
-								li.footer__social_list_item vk
-								li.footer__social_list_item github
-								li.footer__social_list_item in
+								li.footer__social_list_item
+									span.icon-vk_round.icon-round
+								li.footer__social_list_item
+									span.icon-github_round.icon-round
+								li.footer__social_list_item
+									span.icon-in_round.icon-round
 			.footer__bottom
 				.footer__bottom_left Я веб-разработчик из Твери и этот сайт я делал в рамках обучения в Школе онлайн образования LoftSchool
 				.footer__bottom_right &copy;Соколов Дмитрий | создано с любовью в loftschool | 2017

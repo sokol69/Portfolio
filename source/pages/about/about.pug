@@ -10,15 +10,15 @@ block content
 					ul.socials
 						li.socials__item
 							a.socials__link(href='#')
-								img.socials__icon(src=require("./img/vk.svg"))
+								span.icon-vk.icon
 						li.socials__item
 							a.socials__link(href='#')
-								img.socials__icon(src=require("./img/github.svg"))
+								span.icon-github.icon
 						li.socials__item
 							a.socials__link(href='#')
-								img.socials__icon(src=require("./img/in.svg"))
+								span.icon-in.icon
 					.head__menu
-						img.head__menu_icon(src=require("./img/hamburger.svg"))
+						span.icon-hamburger
 				.hero__title
 					.section-title
 						img.section-title__pic(src=require("./img/avag.jpg"))
@@ -26,7 +26,7 @@ block content
 						h2.user__name Дмитрий Соколов
 						.user__data Личный сайт веб-разработчика
 				.hero__arrow.arrow-down
-					img.arrow-down__pic(src=require("./img/arrow_down.svg"))
+					span.icon-arrow_down
 
 			section.section.about
 				.triangle-box
@@ -35,7 +35,7 @@ block content
 						polygon(class="triangle__right" points="1000,0 1000,86 500,86 500,75.5")
 				.about__wrap
 					.about__left
-						h1.about__left_title.title Обо мне
+						.about__left_title.title Обо мне
 						.user-desc
 							img.user-desc__image(src=require("./img/avag.jpg"))
 							.user-desc__title.subtitle Кто я
@@ -112,10 +112,18 @@ block content
 					.contacts__title
 						.subtitle Контакты
 					ul.contacts__list
-						li.contacts__item sokol69
-						li.contacts__item sokolov333d@gmail.com
-						li.contacts__item +7 915 736 1445
-						li.contacts__item г.Тверь, ул. Луначарского д. 34
+						li.contacts__item
+							span.icon-skype.icon-contact.icon-small
+							span sokol69
+						li.contacts__item
+							span.icon-envelope.icon-contact
+							span sokolov333d@gmail.com
+						li.contacts__item
+							span.icon-phone.icon-contact
+							span +7 915 736 1445
+						li.contacts__item
+							span.icon-map_marker.icon-contact.icon-small
+							span г.Тверь, ул. Луначарского д. 34
 		footer.footer
 			.footer__top
 				.footer__top_left
@@ -132,9 +140,12 @@ block content
 				.footer__top_right
 					.footer__social
 							ul.footer__social_list
-								li.footer__social_list_item vk
-								li.footer__social_list_item github
-								li.footer__social_list_item in
+								li.footer__social_list_item
+									span.icon-vk_round.icon-round
+								li.footer__social_list_item
+									span.icon-github_round.icon-round
+								li.footer__social_list_item
+									span.icon-in_round.icon-round
 			.footer__bottom
 				.footer__bottom_left Я веб-разработчик из Твери и этот сайт я делал в рамках обучения в Школе онлайн образования LoftSchool
 				.footer__bottom_right &copy;Соколов Дмитрий | создано с любовью в loftschool | 2017

@@ -1,11 +1,11 @@
 @font-face {
 	font-family: "Roboto";
-	src: url(/source/fonts/Roboto-Regular.ttf);
+	src: url(/fonts/Roboto-Regular.ttf);
 }
 
 @font-face {
 	font-family: "Bernier";
-	src: url(/source/fonts/BERNIERDistressed-Regular.otf);
+	src: url(/fonts/BERNIERDistressed-Regular.otf);
 }
 
 *{
@@ -84,6 +84,31 @@ input, textarea{
 .socials__item{
 	margin: .6rem 1.25rem;
 }
+.icon{
+	font-size: 1.2rem;
+	transition: .3s;
+	opacity: .5;
+}
+
+.icon:hover{
+	opacity: 1;
+}
+
+.icon-hamburger{
+	color: white;
+	cursor: pointer;
+	font-size: 2rem;
+}
+
+.icon-arrow_down{
+	color: white;
+	opacity: .5;
+	transition: .3s;
+}
+
+.icon-arrow_down:hover{
+	opacity: 1;
+}
 
 .head__menu{
 	margin: 1.25rem;
@@ -161,37 +186,99 @@ input, textarea{
 	display: flex;
 	flex-direction: row;
 	height: 33.33rem;
+	width: 100%;
 	background: #eff0e8;
+	position: relative;
 }
 
 .slider__btn{
+	display: flex;
 	width: 10%;
+	color: #00ccad;
+	text-align: center;
+	overflow: hidden;
+}
+
+.icon-portf_arrow_down{
+	margin: auto;
+	cursor: pointer;
+	transition: .3s;
+}
+.icon-portf_arrow_down:hover{
+	color: #007a79;
+}
+.btn-previous{
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.btn-next{
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.prev{
+	transform: rotate(90deg);
+}
+.next{
+	transform: rotate(-90deg);
+}
+
+.slider__wrap{
+	position: absolute;
+	top: 0;
+	left: 10%;
+	height: 100%;
+	width: 80%;
+	overflow: hidden;
 }
 
 .slider__list{
-	width: 80%;
+	height: 100%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
+	white-space: nowrap;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: .5s;
+	font-size: 0;
 }
 
 .slider__item{
 	height: 100%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
-	display: none;
-}
+	display: inline-flex;
+	font-size: 1rem;
 
-.show{
-	display: flex;
 }
 
 .works-content__left{
 	width: 50%;
-	background-image: url(./img/work-1.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center center;
 }
+
+#work-1{
+	background-image: url(./img/work-1.png);
+}
+#work-2{
+	background-image: url(./img/work-2.png);
+}
+#work-3{
+	background-image: url(./img/work-3.png);
+}
+#work-4{
+	background-image: url(./img/work-4.png);
+}
+
 .works-content__right{
 	width: 50%;
 	display: flex;
@@ -250,11 +337,12 @@ input, textarea{
 	text-align: center;
 }
 
-.reviews__tile{
+.reviews__title_wrap{
 	background-image: url(./img/about_header.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center center;
+	width: 100%;
 }
 
 .reviews__list{
@@ -405,11 +493,19 @@ input, textarea{
 
 .footer__top_right{
 	justify-content: flex-end;
-	margin-top: 10px;
 }
 
 .footer__nav, .footer__social{
 	margin: auto 0;
+}
+
+.icon-round{
+	font-size: 2rem;
+	transition: .3s;
+}
+
+.icon-round:hover{
+	color: white;
 }
 
 .footer__nav_list{
@@ -420,6 +516,7 @@ input, textarea{
 	display: flex;
 	margin: 0 2rem;
 	color: white;
+	white-space: nowrap;
 }
 .nav__list_link{
 	transition: .3s;
@@ -455,7 +552,7 @@ input, textarea{
 
 /*--------Adaptive-----------*/
 
-@media screen and (max-width: 770px){
+@media screen and (max-width: 820px){
 	.works{
 		height: 1100px;
 	}
@@ -464,20 +561,13 @@ input, textarea{
 		flex-direction: row;
 	}
 	.slider__list{
-		display: flex;
-		flex-direction: row;
-	}
-	.slider__item{
-		display: flex;
-		flex-direction: column-reverse;
-		justify-content: space-between;
-	}
-	.slider__item{
-		display: none;
 		width: 100%;
 	}
-	.show{
-		display: flex;
+	.slider__item{
+		display: inline-flex;
+		flex-direction: column-reverse;
+		justify-content: space-between;
+		width: 100%;
 	}
 	.works-content__left{
 		height: 50%;
@@ -506,7 +596,7 @@ input, textarea{
 	}
 	.footer__bottom{
 		flex-direction: column;
-		justify-content: flex-end;
+		justify-content: space-around;
 		align-items: center;
 		text-align: center;
 	}
@@ -516,6 +606,9 @@ input, textarea{
 	.footer__top_left,.footer__top_right{
 		width: 100%;
 		justify-content: center;
+	}
+	.footer__top_right{
+		margin-top: 1rem;
 	}
 }
 
@@ -543,5 +636,29 @@ input, textarea{
 	}
 	.reviews__text{
 		margin-bottom: 10px;
+	}
+	.form__wrap{
+		width: 90%;
+	}
+	.blur{
+		width: 90%;
+	}
+	.reviews__form{
+		width: 90%;
+	}
+	.footer__nav_list_item{
+		margin: .5rem;
+	}
+	.footer__bottom_left{
+		margin-bottom: .5rem;
+	}
+}
+
+@media screen and (max-width: 450px){
+	.reviews__item{
+		width: 80%;
+	}
+	.footer{
+		font-size: .9rem;
 	}
 }

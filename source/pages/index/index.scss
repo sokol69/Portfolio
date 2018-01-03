@@ -1,11 +1,6 @@
 @font-face {
 	font-family: "Roboto";
-	src: url(/source/fonts/Roboto-Regular.ttf);
-}
-
-@font-face {
-	font-family: "Bernier";
-	src: url(/source/fonts/BERNIERDistressed-Regular.otf);
+	src: url(/fonts/Roboto-Regular.ttf);
 }
 
 *{
@@ -65,6 +60,7 @@ a{
 	text-align: center;
 	margin-top: 1.25rem;
 	z-index: 5;
+	transition: .3s;
 }
 
 .singin{
@@ -130,6 +126,11 @@ a{
 .icon{
 	font-size: 1.2rem;
 	color: #00b69e;
+	transition: .3s;
+}
+
+.icon:hover{
+	color: white;
 }
 
 .nav__list{
@@ -147,7 +148,8 @@ a{
 	width: 33.33%;
 	height: 3.1rem;;
 	background-color: #00b69e;
-	line-height: 3.1rem;;
+	line-height: 3.1rem;
+	transition: .3s;
 }
 
 .nav__list_item:hover{
