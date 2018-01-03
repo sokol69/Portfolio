@@ -1,0 +1,12 @@
+/*--------Modal window-----------*/
+#window-modal{
+	position: absolute;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background: rgba($color: #55dbc5, $alpha: .8);
+}
+#window-modal__list{
+	margin: 0;
+	padding: 0;
+}
