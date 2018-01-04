@@ -7,11 +7,34 @@ import { setTimeout } from 'timers';
 
 console.log('in works.js');
 
-let btnPrev = document.getElementById('btn__prev');
-let btnNext = document.getElementById('btn__next');
-let sliderList = document.getElementById('slider-list');
-let position = 0;
-let flag = false;
+/*Modal window*/
+let hamburgerBtn = document.getElementById('hamburger-menu'),
+  windowModal = document.getElementById('window-modal'),
+  closeBtn = document.getElementById('window-modal__close-btn');
+
+
+hamburgerBtn.addEventListener('click', () => {
+  console.log('hamburger click');
+
+  windowModal.style.display = 'flex';
+  setTimeout(() => {
+    windowModal.style.top = '0';
+  },100);
+});
+
+closeBtn.addEventListener('click', () => {
+  windowModal.style.top = '-999px';
+  setTimeout(() => {
+    windowModal.style.display = 'none';
+  },1100);
+});
+
+/*Slider*/
+let btnPrev = document.getElementById('btn__prev'),
+  btnNext = document.getElementById('btn__next'),
+  sliderList = document.getElementById('slider-list'),
+  position = 0,
+  flag = false;
 
 let moveSlide = incr => {
   if (!flag) {

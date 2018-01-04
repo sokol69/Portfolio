@@ -6,14 +6,23 @@ html
 		block head
 	body
 		#window-modal
-				ul#window-modal__list
-					li#window-modal__item
-						a МОИ РАБОТЫ
-					li#window-modal__item
-						a ОБО МНЕ
-					li#window-modal__item
-						a БЛОГ
-					li#window-modal__item
-						a АВТОРИЗАЦИЯ
+			#window-modal__close-btn +
+			ul#window-modal__list
+				li.window-modal__item
+					.rectangle
+					a.window-modal__link(href='works.html') МОИ РАБОТЫ
+					.rectangle
+				li.window-modal__item
+					.rectangle
+					a.window-modal__link(href='about.html') ОБО МНЕ
+					.rectangle
+				li.window-modal__item
+					.rectangle
+					a.window-modal__link(href='blog.html') БЛОГ
+					.rectangle
+				li.window-modal__item
+					.rectangle
+					a.window-modal__link(href='index.html') АВТОРИЗАЦИЯ
+					.rectangle
 		block content
 
