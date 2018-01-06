@@ -6,27 +6,29 @@ block content
 	.wrapper
 		.container
 			section.section.hero
-						header.head
-							ul.socials
-								li.socials__item
-									a.socials__link(href='#')
-										span.icon-vk.icon
-								li.socials__item
-									a.socials__link(href='#')
-										span.icon-github.icon
-								li.socials__item
-									a.socials__link(href='#')
-										span.icon-in.icon
-							.head__menu
-								span.icon-hamburger#hamburger-menu
-						.hero__title
-							.section-title
-								img.section-title__pic(src=require("./img/avag.jpg"))
-							.hero__user.user
-								.user__name.title БЛОГ
-								.user__data Статьи, которые я написал
-						.hero__arrow.arrow-down
-							span.icon-arrow_down
+				.hero__sec
+					img.hero__sec-img(src="../../../images/icons/blog_header.svg")
+				header.head
+					ul.socials
+						li.socials__item
+							a.socials__link(href='#')
+								span.icon-vk.icon
+						li.socials__item
+							a.socials__link(href='#')
+								span.icon-github.icon
+						li.socials__item
+							a.socials__link(href='#')
+								span.icon-in.icon
+					.head__menu
+						span.icon-hamburger#hamburger-menu.icon
+				.hero__title
+					.section-title
+						img.section-title__pic(src=require("./img/avag.jpg"))
+					.hero__user.user
+						.user__name.title БЛОГ
+						.user__data Статьи, которые я написал
+				.hero__arrow.arrow-down
+					span.icon-arrow_down.icon
 
 			section.content
 				.triangle-box

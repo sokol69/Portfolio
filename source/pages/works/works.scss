@@ -63,10 +63,37 @@ input, textarea{
 /*--------Hero-----------*/
 
 .hero{
-	background: url(../../../images/background/bg.jpg) no-repeat;
-	background-size: cover;
 	flex-direction: column;
+	justify-content: space-between;
+	min-height: 650px;
 }
+
+.hero__bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+}
+.hero__bg-img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.hero__sec{
+	position: absolute;
+	top: 40%;
+	left: 0;
+	right: 0;
+	opacity: .2;
+	width: 40rem;
+	margin: auto;
+}
+.hero__sec-img{
+	max-width: 100%;
+ }
 
 .head{
 	width: 100%;
@@ -74,6 +101,7 @@ input, textarea{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	position: relative;
 }
 
 .socials{
@@ -83,31 +111,6 @@ input, textarea{
 
 .socials__item{
 	margin: .6rem 1.25rem;
-}
-.icon{
-	font-size: 1.2rem;
-	transition: .3s;
-	opacity: .5;
-}
-
-.icon:hover{
-	opacity: 1;
-}
-
-.icon-hamburger{
-	color: white;
-	cursor: pointer;
-	font-size: 2rem;
-}
-
-.icon-arrow_down{
-	color: white;
-	opacity: .5;
-	transition: .3s;
-}
-
-.icon-arrow_down:hover{
-	opacity: 1;
 }
 
 .head__menu{
@@ -122,6 +125,10 @@ input, textarea{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	position: absolute;
+	top: 15%;
+	left: 0;
+	right: 0;
 }
 
 .section-title{
@@ -154,6 +161,7 @@ input, textarea{
 	widows: 2vw;
 	height: 10vh;
 	margin: 0 auto 2rem auto;
+	position: relative;
 }
 
 /*--------MyWorks-----------*/
@@ -161,12 +169,14 @@ input, textarea{
 .works{
 	display: flex;
 	flex-direction: column;
+	position: relative;
 }
 
 .triangle-box{
 	width: 100%;
 	margin-top: -8vw;
 	height: 8vw;
+	z-index: 10;
 }
 
 .triangle__left, .triangle__right{
@@ -338,7 +348,7 @@ input, textarea{
 }
 
 .reviews__title_wrap{
-	background-image: url(./img/about_header.svg);
+	background-image: url(../../../images/icons/about_header_white.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center center;
@@ -388,8 +398,10 @@ input, textarea{
 
 .form__wrap{
 	position: relative;
-	width: 23.93rem;
-	height: 30rem;
+	width: 25rem;
+	height: 35rem;
+	overflow: hidden;
+	border-radius: .7rem;
 }
 
 .reviews__form, .blur{
@@ -402,12 +414,10 @@ input, textarea{
 
 .blur{
 	z-index: 99;
-	filter: blur(5px);
-	background-color: rgb(233, 233, 233);
+	background: url(../../../images/background/bgReviews.jpg) no-repeat center;
 	width: 25rem;
 	height: 35rem;
-	opacity: .7;
-	overflow: hidden;
+	filter: blur(20px);
 }
 
 .reviews__form{
@@ -416,7 +426,6 @@ input, textarea{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	border-radius: 5px;
 	z-index: 100;
 }
 
@@ -452,14 +461,8 @@ input, textarea{
 }
 
 .btn__send{
-	border-right: 1px solid rgb(184, 181, 181);
-	border-radius: 0 0 0 5px;
+	border-right: 1px solid white;
 }
-
-.btn__clear{
-	border-radius: 0 0 5px 0;
-}
-
 /*--------Footer-----------*/
 
 .footer{
@@ -637,15 +640,6 @@ input, textarea{
 	.reviews__text{
 		margin-bottom: 10px;
 	}
-	.form__wrap{
-		width: 90%;
-	}
-	.blur{
-		width: 90%;
-	}
-	.reviews__form{
-		width: 90%;
-	}
 	.footer__nav_list_item{
 		margin: .5rem;
 	}
@@ -660,5 +654,16 @@ input, textarea{
 	}
 	.footer{
 		font-size: .9rem;
+	}
+}
+@media screen and (max-width: 370px){
+	.form__wrap{
+		width: 90%;
+	}
+	.reviews__form{
+		width: 100%;
+	}
+	.blur{
+		width: 100%;
 	}
 }

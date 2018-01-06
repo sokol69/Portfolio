@@ -59,6 +59,14 @@ a{
 
 
 /*--------Hero-----------*/
+.hero__sec{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	opacity: .2;
+	transform: translate(-50%, -50%);
+	max-width: 100%;
+}
 
 .hero{
 	background: url(../../../images/background/bg.jpg) no-repeat;
@@ -83,32 +91,6 @@ a{
 	margin: .6rem 1.25rem;
 }
 
-.icon{
-	font-size: 1.2rem;
-	transition: .3s;
-	opacity: .5;
-}
-
-.icon:hover{
-	opacity: 1;
-}
-
-.icon-hamburger{
-	color: white;
-	cursor: pointer;
-	font-size: 2rem;
-}
-
-.icon-arrow_down{
-	color: white;
-	opacity: .5;
-	transition: .3s;
-}
-
-.icon-arrow_down:hover{
-	opacity: 1;
-}
-
 .head__menu{
 	margin: 1.25rem;
 }
@@ -116,7 +98,7 @@ a{
 .hero__title{
 	width: 21rem;
 	height: 26.5rem;
-	color: rgba(255, 255, 255, 0.904);
+	color: rgb(255, 255, 255);
 	margin: auto;
 	display: flex;
 	flex-direction: column;

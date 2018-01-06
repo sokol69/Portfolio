@@ -6,6 +6,10 @@ block content
 	.wrapper
 		.container
 			section.section.hero
+				.hero__bg
+					img.hero__bg-img(src="../../../images/background/bg.jpg")
+				.hero__sec
+					img.hero__sec-img(src="../../../images/icons/portfolio_header.svg")
 				header.head
 					ul.socials
 						li.socials__item
@@ -18,7 +22,7 @@ block content
 							a.socials__link(href='#')
 								span.icon-in.icon
 					.head__menu
-						span.icon-hamburger#hamburger-menu
+						span.icon-hamburger#hamburger-menu.icon
 				.hero__title
 					.section-title
 						img.section-title__pic(src=require("./img/avag.jpg"))
@@ -26,7 +30,7 @@ block content
 						h2.user__name Дмитрий Соколов
 						.user__data Личный сайт веб-разработчика
 				.hero__arrow.arrow-down
-					span.icon-arrow_down
+					span.icon-arrow_down.icon
 
 			section.section.works
 				.triangle-box
