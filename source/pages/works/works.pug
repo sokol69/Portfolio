@@ -7,9 +7,9 @@ block content
 		.container
 			section.section.hero
 				.hero__bg
-					img.hero__bg-img(src="../../../images/background/bg.jpg")
+					img.hero__bg-img(src=require("../../../images/background/bg.jpg"))
 				.hero__sec
-					img.hero__sec-img(src="../../../images/icons/portfolio_header.svg")
+					img.hero__sec-img(src=require("../../../images/icons/portfolio_header.svg"))
 				header.head
 					ul.socials
 						li.socials__item
@@ -29,16 +29,19 @@ block content
 					.hero__user.user
 						h2.user__name Дмитрий Соколов
 						.user__data Личный сайт веб-разработчика
-				.hero__arrow.arrow-down
-					span.icon-arrow_down.icon
+				.hero__arrow.arrow-down#arrow-down
+					a(href='#work__title')
+						span.icon-arrow_down.icon
 
 			section.section.works
 				.triangle-box
 					svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="triangles")
 						polygon(class="triangle__left" points="0,0 0,86 500.8,86 500.8,75.5")
 						polygon(class="triangle__right" points="1000,0 1000,86 500,86 500,75.5")
-				.works__title_wrap
+				.works__title_wrap#work__title.title-rectangle__wrap
+					.rectangle
 					.works__title.title МОИ РАБОТЫ
+					.rectangle
 				.works-content
 					.slider__btn.btn-previous
 						span.icon-portf_arrow_down.prev#btn__prev
@@ -49,7 +52,10 @@ block content
 									.works-content__img
 								.works-content__right
 									.works-content__img
-									.works-content__title.subtitle Сайт школы онлайн <br> образования
+									.title-rectangle__wrap
+										.rectangle
+										.works-content__title.subtitle Сайт школы онлайн <br> образования
+										.rectangle
 									.works-content__desc HTML, CSS, JavaScript
 									.works-content__site
 										.site__text
@@ -60,7 +66,10 @@ block content
 									.works-content__img
 								.works-content__right
 									.works-content__img
-									.works-content__title.subtitle Сайт web-студии <br> ITloft
+									.title-rectangle__wrap
+										.rectangle
+										.works-content__title.subtitle Сайт web-студии <br> "ITloft"
+										.rectangle
 									.works-content__desc HTML, CSS, JavaScript
 									.works-content__site
 										.site__text
@@ -71,7 +80,10 @@ block content
 									.works-content__img
 								.works-content__right
 									.works-content__img
-									.works-content__title.subtitle Портал видеоуроков <br> и IT сообщество
+									.title-rectangle__wrap
+										.rectangle
+										.works-content__title.subtitle Портал видеоуроков <br> и IT сообщество
+										.rectangle
 									.works-content__desc HTML, CSS, JavaScript
 									.works-content__site
 										.site__text
@@ -82,7 +94,10 @@ block content
 									.works-content__img
 								.works-content__right
 									.works-content__img
-									.works-content__title.subtitle Сайт школы йоги <br> ATMA YOGA
+									.title-rectangle__wrap
+										.rectangle
+										.works-content__title.subtitle Сайт школы йоги <br> "АТМА ЙОГА"
+										.rectangle
 									.works-content__desc HTML, CSS, JavaScript
 									.works-content__site
 										.site__text
@@ -92,8 +107,10 @@ block content
 						span.icon-portf_arrow_down.next#btn__next
 
 			section.section.reviews
-				.reviews__title_wrap
+				.reviews__title_wrap.title-rectangle__wrap
+					.rectangle
 					.reviews__tile.title ЧТО ОБО МНЕ <br> ГОВОРЯТ
+					.rectangle
 				ul.reviews__list
 					li.reviews__item
 						img.reviews__quotes(src=require("./img/quotes.jpg"))
@@ -114,7 +131,10 @@ block content
 				.form__wrap
 					.blur
 					.reviews__form
-						.form__title.subtitle  Связаться со мной
+						.title-rectangle__wrap
+							.rectangle
+							.form__title.subtitle Связаться со мной
+							.rectangle
 						input.form__name(type="text" placeholder="Имя")
 						input.form__email(type="text" placeholder="Email")
 						textarea.form__message(name="message", cols="30", rows="10", placeholder="Ваше сообщение")

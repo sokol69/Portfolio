@@ -95,8 +95,8 @@ var parallax = (function() {
 
     init: function (wScroll) {
       this.move(bg, wScroll, 50);
-      this.move(user, wScroll, 20);
-      this.move(sectionText, wScroll, 25);
+      this.move(user, wScroll, 25);
+      this.move(sectionText, wScroll, 15);
 
     },
   };
@@ -106,3 +106,13 @@ window.onscroll = () => {
   var wScroll = window.pageYOffset;
   parallax.init(wScroll);
 };
+
+/*MoveDown*/
+$(document).ready(function(){
+  $('#arrow-down').on('click','a', function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+      top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
+  });
+});

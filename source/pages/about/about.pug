@@ -1,13 +1,16 @@
 extends ../base
 
 block head
+	<!--script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwSwQU5NeTimEUyAEr0kfZ2rJGF8cTS1M&callback=initMap")-->
 	title Главная страница
 block content
 	.wrapper
 		.container
 			section.section.hero
+				.hero__bg
+					img.hero__bg-img(src=require("../../../images/background/bg.jpg"))
 				.hero__sec
-					img.hero__sec-img(src="../../../images/icons/about_header_white.svg")
+					img.hero__sec-img(src=require("../../../images/icons/about_header_white.svg"))
 				header.head
 					ul.socials
 						li.socials__item
@@ -27,26 +30,35 @@ block content
 					.hero__user.user
 						h2.user__name Дмитрий Соколов
 						.user__data Личный сайт веб-разработчика
-				.hero__arrow.arrow-down
-					span.icon-arrow_down.icon
+				.hero__arrow.arrow-down#arrow-down
+					a(href='#about')
+						span.icon-arrow_down.icon
 
-			section.section.about
+			section.section.about#about
 				.triangle-box
 					svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="triangles")
 						polygon(class="triangle__left" points="0,0 0,86 500.8,86 500.8,75.5")
 						polygon(class="triangle__right" points="1000,0 1000,86 500,86 500,75.5")
 				.about__wrap
 					.about__left
-						img.title-img(src="../../../images/icons/about_header.svg")
-						.about__left_title.title Обо мне
+						.about__title_wrap.title-rectangle__wrap
+							.rectangle
+							.about__left_title.title Обо мне
+							.rectangle
 						.user-desc
 							img.user-desc__image(src=require("./img/avag.jpg"))
-							.user-desc__title.subtitle Кто я
+							.title-rectangle__wrap
+								.rectangle
+								.user-desc__title.subtitle Кто я
+								.rectangle
 							.text-block.user-desc__text
 								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, sint quaerat architecto iusto incidunt enim a ipsam velit hic et veniam, tempore cum veritatis earum error expedita provident eos. Quis?
 								p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor commodi natus quasi accusantium odit ipsa perspiciatis eos similique quaerat exercitationem iste quidem tempore harum cumque reprehenderit, minima fugit iure numquam.
 					.about__right
-						.about__right-title.subtitle Чем я могу быть <br> вам полезен
+						.title-rectangle__wrap
+							.rectangle
+							.about__right-title.subtitle Чем я могу быть <br> вам полезен
+							.rectangle
 						.text-block.about__right-desc
 							p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку. 
 						.about__right-content
@@ -111,8 +123,10 @@ block content
 			section.section.map
 				.google-map#map
 				.contacts
-					.contacts__title
-						.subtitle Контакты
+					.contacts__title.title-rectangle__wrap
+						.rectangle
+						.subtitle#contact-title Контакты
+						.rectangle
 					ul.contacts__list
 						li.contacts__item
 							span.icon-skype.icon-contact.icon-small

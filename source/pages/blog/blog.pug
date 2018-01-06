@@ -6,6 +6,8 @@ block content
 	.wrapper
 		.container
 			section.section.hero
+				.hero__bg
+					img.hero__bg-img(src=require("../../../images/background/bg.jpg"))
 				.hero__sec
 					img.hero__sec-img(src="../../../images/icons/blog_header.svg")
 				header.head
@@ -27,36 +29,53 @@ block content
 					.hero__user.user
 						.user__name.title БЛОГ
 						.user__data Статьи, которые я написал
-				.hero__arrow.arrow-down
-					span.icon-arrow_down.icon
+				.hero__arrow.arrow-down#arrow-down
+					a(href='#content__wrap')
+						span.icon-arrow_down.icon
 
 			section.content
 				.triangle-box
 							svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="triangles")
 								polygon(class="triangle__left" points="0,0 0,86 500.8,86 500.8,75.5")
 								polygon(class="triangle__right" points="1000,0 1000,86 500,86 500,75.5")
-				.content__wrap
-					menu.sidebar
-						ul.sidebar__list
-							li.sidebar__item Самое важное в SASS
-							li.sidebar__item Приёмы в вёрстке, без которых не обходится ни один сайт
-							li.sidebar__item Самый необходимый набор Gulp плагинов
-							li.sidebar__item Почему я выбрал Jade
+				.content__wrap#content__wrap
+					.sidebar__wrap
+						menu.sidebar#sidebar
+							ul.sidebar__list
+								li.sidebar__item
+									a.sidebar__link(href='#paper1') Самое важное в SASS
+								li.sidebar__item
+									a.sidebar__link(href='#paper2') Приёмы в вёрстке, без которых не обходится ни один сайт
+								li.sidebar__item
+									a.sidebar__link(href='#paper3') Самый необходимый набор Gulp плагинов
+								li.sidebar__item
+									a.sidebar__link(href='#paper4') Почему я выбрал Jade
 					.paper__wrap
-						.content__paper
+						.content__paper#paper1
 							.paper__title.subtitle Самое важное в SASS
-							.paper__date 22 ноября 2016
+							.paper__date 26 ноября 2016
 							.paper__text 
 								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque facere ipsum natus distinctio aliquid magni quaerat modi, voluptatum laudantium exercitationem, blanditiis eveniet doloremque harum dignissimos minus fugiat repudiandae. Minima eos, labore quae est soluta, nostrum ipsa non iste ab pariatur rem? Perspiciatis veniam quos architecto vitae assumenda consequuntur esse veritatis inventore earum impedit facere eaque et natus sint eius excepturi, laborum voluptates aperiam distinctio molestias. Iste quia qui nobis veniam vero obcaecati, necessitatibus hic vel rem quas? Impedit accusantium id quisquam cupiditate! Libero accusamus incidunt vel repellat in. Consectetur, fugiat minima magnam veniam vitae saepe enim molestiae eaque. Pariatur, odio? Perferendis mollitia repudiandae minus voluptatem omnis consequatur deleniti aperiam officia veritatis provident tenetur eius, nisi hic voluptatum voluptas voluptate magni sequi sapiente blanditiis iste fuga eum saepe vel. Explicabo vitae voluptatibus fuga animi sed accusantium, laboriosam fugiat unde quo quae culpa eaque ex expedita velit veniam aperiam suscipit doloribus nesciunt?
 								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, harum necessitatibus. Corporis ea ad neque ab impedit, illum delectus, quis laudantium, animi est voluptatem non eveniet molestias. Illo recusandae pariatur sequi accusamus, ipsa, eaque voluptas deserunt facilis nesciunt suscipit inventore. Deserunt, iste necessitatibus excepturi voluptatem dicta culpa corrupti sunt possimus fugit voluptas fuga expedita optio recusandae quas. Sint incidunt, deleniti recusandae vitae optio nemo eos alias rem eaque quasi voluptatem fugiat quia ullam officia earum voluptas repellat sapiente quas debitis consectetur? Voluptate in doloribus nisi molestias! Voluptatem at nam fugit repellendus maxime assumenda accusantium tenetur perferendis ullam quisquam, provident ab?
 
-						.content__paper.last__paper
+						.content__paper#paper2
 							.paper__title.subtitle Приёмы в вёрстке, без которых не обходится ни один сайт
-							.paper__date 13 ноября 2016
+							.paper__date 22 ноября 2016
 							.paper__text
 								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta fugit esse porro rem saepe ut, corporis harum doloremque itaque minima expedita nobis explicabo voluptatibus quis officia a quo fugiat repellendus quisquam nulla, sed enim optio laboriosam! Eveniet aperiam exercitationem impedit vero veniam minus atque natus animi? Dolorem, quia hic repellendus a, asperiores fugiat eaque alias sapiente quod, excepturi voluptate cum quidem expedita iste! Ab unde ea aperiam sint tenetur neque repudiandae nam explicabo totam saepe? Commodi dignissimos repudiandae aliquid temporibus, saepe distinctio quod odio provident nulla corrupti ipsum in! Cupiditate suscipit officiis ipsam maxime quo perspiciatis natus voluptatibus dicta sunt?
 								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consequuntur voluptatibus optio. Nisi eligendi soluta veniam error dolor quod modi laudantium nostrum rerum, reiciendis unde commodi? Corporis iure sequi libero temporibus vel. Ad veritatis nulla voluptas temporibus, accusantium ex eveniet incidunt consequatur porro libero et? Earum amet iste eveniet iusto hic, magni autem corporis nisi a, velit sequi ipsum obcaecati ducimus architecto? Aliquam culpa odio vitae expedita labore voluptates inventore consequatur. Dolorem, libero! Ullam quo iure ut ab atque explicabo odit, pariatur dignissimos eaque alias porro quos praesentium? Veritatis quae nisi rerum! Rerum voluptas quos quaerat error. Temporibus non soluta maiores ex quae recusandae accusantium illo, ad suscipit inventore cumque nisi numquam magni eos sed voluptate dolor quaerat minus error iure nobis corrupti placeat officiis? Mollitia eum, magni deserunt suscipit provident repellendus cupiditate laborum tempore rem quaerat. Quo aperiam laborum inventore veniam nulla, laudantium soluta modi atque nam praesentium voluptates?
-
+						.content__paper#paper3
+							.paper__title.subtitle Самый необходимый набор Gulp плагинов
+							.paper__date 12 ноября 2016
+							.paper__text 
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque facere ipsum natus distinctio aliquid magni quaerat modi, voluptatum laudantium exercitationem, blanditiis eveniet doloremque harum dignissimos minus fugiat repudiandae. Minima eos, labore quae est soluta, nostrum ipsa non iste ab pariatur rem? Perspiciatis veniam quos architecto vitae assumenda consequuntur esse veritatis inventore earum impedit facere eaque et natus sint eius excepturi, laborum voluptates aperiam distinctio molestias. Iste quia qui nobis veniam vero obcaecati, necessitatibus hic vel rem quas? Impedit accusantium id quisquam cupiditate! Libero accusamus incidunt vel repellat in. Consectetur, fugiat minima magnam veniam vitae saepe enim molestiae eaque. Pariatur, odio? Perferendis mollitia repudiandae minus voluptatem omnis consequatur deleniti aperiam officia veritatis provident tenetur eius, nisi hic voluptatum voluptas voluptate magni sequi sapiente blanditiis iste fuga eum saepe vel. Explicabo vitae voluptatibus fuga animi sed accusantium, laboriosam fugiat unde quo quae culpa eaque ex expedita velit veniam aperiam suscipit doloribus nesciunt?
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, harum necessitatibus. Corporis ea ad neque ab impedit, illum delectus, quis laudantium, animi est voluptatem non eveniet molestias. Illo recusandae pariatur sequi accusamus, ipsa, eaque voluptas deserunt facilis nesciunt suscipit inventore. Deserunt, iste necessitatibus excepturi voluptatem dicta culpa corrupti sunt possimus fugit voluptas fuga expedita optio recusandae quas. Sint incidunt, deleniti recusandae vitae optio nemo eos alias rem eaque quasi voluptatem fugiat quia ullam officia earum voluptas repellat sapiente quas debitis consectetur? Voluptate in doloribus nisi molestias! Voluptatem at nam fugit repellendus maxime assumenda accusantium tenetur perferendis ullam quisquam, provident ab?
+						.content__paper#paper4.last__paper
+							.paper__title.subtitle Почему я выбрал Jade
+							.paper__date 5 ноября 2016
+							.paper__text 
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque facere ipsum natus distinctio aliquid magni quaerat modi, voluptatum laudantium exercitationem, blanditiis eveniet doloremque harum dignissimos minus fugiat repudiandae. Minima eos, labore quae est soluta, nostrum ipsa non iste ab pariatur rem? Perspiciatis veniam quos architecto vitae assumenda consequuntur esse veritatis inventore earum impedit facere eaque et natus sint eius excepturi, laborum voluptates aperiam distinctio molestias. Iste quia qui nobis veniam vero obcaecati, necessitatibus hic vel rem quas? Impedit accusantium id quisquam cupiditate! Libero accusamus incidunt vel repellat in. Consectetur, fugiat minima magnam veniam vitae saepe enim molestiae eaque. Pariatur, odio? Perferendis mollitia repudiandae minus voluptatem omnis consequatur deleniti aperiam officia veritatis provident tenetur eius, nisi hic voluptatum voluptas voluptate magni sequi sapiente blanditiis iste fuga eum saepe vel. Explicabo vitae voluptatibus fuga animi sed accusantium, laboriosam fugiat unde quo quae culpa eaque ex expedita velit veniam aperiam suscipit doloribus nesciunt?
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, harum necessitatibus. Corporis ea ad neque ab impedit, illum delectus, quis laudantium, animi est voluptatem non eveniet molestias. Illo recusandae pariatur sequi accusamus, ipsa, eaque voluptas deserunt facilis nesciunt suscipit inventore. Deserunt, iste necessitatibus excepturi voluptatem dicta culpa corrupti sunt possimus fugit voluptas fuga expedita optio recusandae quas. Sint incidunt, deleniti recusandae vitae optio nemo eos alias rem eaque quasi voluptatem fugiat quia ullam officia earum voluptas repellat sapiente quas debitis consectetur? Voluptate in doloribus nisi molestias! Voluptatem at nam fugit repellendus maxime assumenda accusantium tenetur perferendis ullam quisquam, provident ab?
 		footer.footer
 			.footer__top
 				.footer__top_left

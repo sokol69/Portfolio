@@ -39,8 +39,51 @@ window.addEventListener('scroll', () => {
   }
 });
 
+/*Parallax-Scroll*/
+var parallax = (function() {
+  var bg = document.querySelector('.hero__bg');
+  var user = document.querySelector('.hero__title');
+  var sectionText = document.querySelector('.hero__sec');
+
+  return {
+    move: function(block, windowScroll, strafeAmount) {
+      var strafe = windowScroll/strafeAmount + '%';
+      var transformString = 'translate3d(0, ' + strafe + ', 0)';
+
+      var style = block.style;
+
+      style.transform = transformString;
+      style.webkitTransform = transformString;
+
+    },
+
+    init: function (wScroll) {
+      this.move(bg, wScroll, 50);
+      this.move(user, wScroll, 25);
+      this.move(sectionText, wScroll, 15);
+
+    },
+  };
+}());
+
+window.onscroll = () => {
+  var wScroll = window.pageYOffset;
+  parallax.init(wScroll);
+};
+
+/*MoveDown*/
+$(document).ready(function(){
+  $('#arrow-down').on('click','a', function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+      top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
+  });
+});
+
 /*Google Map*/
-/*function initMap() {
+/*
+function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 56.86220568, lng: 35.91911316},
     zoom: 13,
