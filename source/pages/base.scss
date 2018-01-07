@@ -164,7 +164,125 @@ a{
 	transition: .3s;
 	margin: 0 1rem;
 }
-/*--------Modal window-----------*/
+
+/*--------Preloader----------*/
+#loader__area{
+	background: #00b69e;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right:0;
+	bottom:0;
+	z-index: 100000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 1.5s;
+}
+.round1, .round1::before, .round1::after{
+	border: 3px solid transparent;
+	border-radius: 50%;
+}
+
+.round1{
+	width: 150px;
+	height: 150px;
+	margin: 50px auto;
+	position: relative;
+	border-top-color: #ffffff;
+	animation: spin 1s infinite linear;
+}
+
+.round1::before, .round1::after{
+	content: '';
+	position: absolute;
+}
+
+.round1::before{
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	border-top-color: #ffffff;
+	animation: spin 2s infinite linear;
+}
+
+.round1::after{
+	top: 23px;
+	left: 23px;
+	right: 23px;
+	bottom: 23px;
+	border-top-color: #ffffff;
+	animation: spin 3s infinite linear;
+}
+
+.anti::after{
+	animation: antispin .5s infinite linear;
+	top: 43px;
+	left: 43px;
+	right: 43px;
+	bottom: 43px;
+	border-bottom-color: #ffffff;
+}
+
+@-webkit-keyframes spin {
+	from {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin{
+	from {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes antispin {
+	from {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	to {
+		-webkit-transform: rotate(-360deg);
+		-ms-transform: rotate(-360deg);
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes antispin{
+	from {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	to {
+		-webkit-transform: rotate(-360deg);
+		-ms-transform: rotate(-360deg);
+		transform: rotate(-360deg);
+	}
+}
+
+/*--------Adaptive-----------*/
 @media screen and (max-width: 650px){
 	.hero__sec{
 		width: 90%

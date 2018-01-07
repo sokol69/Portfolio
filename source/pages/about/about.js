@@ -5,6 +5,17 @@ import './../base.scss';
 
 console.log('in about.js');
 
+/*Preloader*/
+var removeLoader = function() {
+  var loaderArea = document.getElementById('loader__area');
+  loaderArea.style.opacity = '0.1';
+  setTimeout( () => {
+    loaderArea.style.display = 'none';
+  }, 2000);
+};
+  
+window.addEventListener('load', removeLoader);
+
 /*Modal window*/
 let hamburgerBtn = document.getElementById('hamburger-menu'),
   windowModal = document.getElementById('window-modal'),

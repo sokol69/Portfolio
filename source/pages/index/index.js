@@ -2,8 +2,20 @@ import 'normalize.css';
 import './index.scss';
 import './style.css';
 import './../base.scss';
+import { setTimeout } from 'timers';
 
 console.log('in index.js');
+
+/*Preloader*/
+var removeLoader = function() {
+  var loaderArea = document.getElementById('loader__area');
+  loaderArea.style.opacity = '0.1';
+  setTimeout( () => {
+    loaderArea.style.display = 'none';
+  }, 2000);
+};
+
+window.addEventListener('load', removeLoader);
 
 /*Parallax*/
 const parallaxContainer = document.getElementById('parallax');
