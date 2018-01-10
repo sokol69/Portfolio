@@ -27,33 +27,63 @@ block content
 			.parallax__layer
 				img.parallax__image(src=require("../../../images/parallax/layer-10-min.png"))
 		header.header
-			.singin__box
+			#singin__box
 				.singin Авторизоваться
-		.content
-			section.welcome
-				.welcome__img
-					img.welcome__img_ava(src=require("./img/avag.jpg"))
-				.welcome__text
-					h2.welcome__title #{name}
-					.welcome__title_small Личный сайт веб-разработчика
-				.welcome__socials
-					span.welcome__socials_icon
-						a(href='#' style="color: #00b69e")
-							span.icon-vk.icon
-					span.welcome__socials_icon
-						a(href='#')
-							span.icon-github.icon
-					span.welcome__socials_icon
-						a(href='#')
-							span.icon-in.icon
-				nav.nav
-					ul.nav__list
-						li.nav__list_item.item_m
-							a.nav__list_link(href='works.html') Мои работы
-						li.nav__list_item.item_m
-							a.nav__list_link(href='about.html') Обо мне
-						li.nav__list_item
-							a.nav__list_link(href='blog.html') Блог
+		section.content
+			.flip-container
+				#flipper
+					.front.welcome
+						.welcome__img
+							img.welcome__img_ava(src=require("./img/avag.jpg"))
+						.welcome__text
+							h2.welcome__title #{name}
+							.welcome__title_small Личный сайт веб-разработчика
+						.welcome__socials
+							span.welcome__socials_icon
+								a(href='https://vk.com/dima33333')
+									span.icon-vk.icon
+							span.welcome__socials_icon
+								a(href='https://github.com/sokol69')
+									span.icon-github.icon
+							span.welcome__socials_icon
+								a(href='#')
+									span.icon-in.icon
+						nav.nav
+							ul.nav__list
+								li.nav__list_item.item_m
+									a.nav__list_link(href='works.html') Мои работы
+								li.nav__list_item.item_m
+									a.nav__list_link(href='about.html') Обо мне
+								li.nav__list_item
+									a.nav__list_link(href='blog.html') Блог
+					.back
+						.title-rectangle__wrap
+							.rectangle
+							.back__title.subtitle Авторизируйтесь
+							.rectangle 
+						form.back-input__wrap(action="#" method="POST")
+							.input-container
+								.input-icon__wrap
+									span.icon-login.input__icon
+								input#login.back__input(type="text" placeholder="Логин")
+							.input-container
+								.input-icon__wrap
+									span.icon-password.input__icon
+								input#password.back__input(type="password" placeholder="Пароль")
+							.test-human__wrap
+								input#test-human(type="checkbox")
+								label(for="test-human").test-human__text Я человек
+							.test-question Вы точно не робот?
+							.test-robot__wrap
+								input.test-robot#yes(type="radio" name="question")
+								label(for="yes").test-robot__text.text-yes Да
+								input.test-robot#no(type="radio" name="question")
+								label(for="no").test-robot__text.text-no Не уверен
+						ul.nav__list.back__nav
+							li.nav__list_item.item_m.back__btn#btn-return
+								a.nav__list_link(href='#') На главную
+							li.nav__list_item.back__btn#btn-enter
+								a.nav__list_link(href='#') Войти
 		footer.footer
 			.footer__text &copy;Соколов Дмитрий | создано с любовью в loftschool | 2017
 

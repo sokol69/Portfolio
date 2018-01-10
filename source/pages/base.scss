@@ -180,6 +180,17 @@ a{
 	align-items: center;
 	transition: 1.5s;
 }
+#loader__text{
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 .round1, .round1::before, .round1::after{
 	border: 3px solid transparent;
 	border-radius: 50%;
@@ -279,6 +290,30 @@ a{
 		-webkit-transform: rotate(-360deg);
 		-ms-transform: rotate(-360deg);
 		transform: rotate(-360deg);
+	}
+}
+
+.bounce{
+	animation: bounce 1.5s cubic-bezier(.07, .74, .25, .97);
+}
+@keyframes bounce{
+	0%{
+		transform: scale(.3, .3);
+	}
+	20%{
+		transform: scale(1.1, 1.1);
+	}
+	40%{
+		transform: scale(.9, .9);
+	}
+	60%{
+		transform: scale(1.03, 1.03);
+	}
+	80%{
+		transform: scale(.97, .97);
+	}
+	100%{
+		transform: scale(1, 1);
 	}
 }
 

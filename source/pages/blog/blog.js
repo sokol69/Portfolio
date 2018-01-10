@@ -7,16 +7,30 @@ import { setTimeout } from 'timers';
 
 console.log('in blog.js');
 
-/*Preloader*/
-var removeLoader = function() {
-  var loaderArea = document.getElementById('loader__area');
+/*-------------Preloader----------*/
+const showPercent = () => {
+  const percentDisplay = document.getElementById('loader__text');
+  let i = 0;
+  let timer = setTimeout( function go() {
+    if (i <= 100) {
+      percentDisplay.innerText = i + '%';
+      setTimeout(go, 100);
+      i += 10;
+    } else {
+      removeLoader();
+    }
+  }, 100);
+};
+
+const removeLoader = () => {
+  const loaderArea = document.getElementById('loader__area');
   loaderArea.style.opacity = '0.1';
   setTimeout( () => {
     loaderArea.style.display = 'none';
-  }, 2000);
+  }, 1000);
 };
-  
-window.addEventListener('load', removeLoader);
+
+document.addEventListener('DOMContentLoaded', showPercent);
 
 /*Modal window*/
 let hamburgerBtn = document.getElementById('hamburger-menu'),
@@ -71,7 +85,7 @@ var parallax = (function() {
     },
 
     init: function (wScroll) {
-      this.move(user, wScroll, 25);
+      this.move(user, wScroll, 30);
       this.move(sectionText, wScroll, 15);
 
     },
@@ -101,6 +115,18 @@ window.onscroll = () => {
   var wScroll = window.pageYOffset;
   parallax.init(wScroll);
 };
+
+const openSidebarBtn = document.getElementById('sidebar-open');
+const sidebar = document.getElementById('sidebar');
+const closeSidebarBtn = document.getElementById('sidebar-close');
+
+openSidebarBtn.addEventListener('click', () => {
+  sidebar.style.left = '0';
+});
+
+closeSidebarBtn.addEventListener('click', () => {
+  sidebar.style.left = '-59%';
+});
 
 /*MoveDown*/
 $(document).ready(function(){
