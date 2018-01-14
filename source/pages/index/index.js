@@ -49,7 +49,7 @@ const showPercent = () => {
       i += 10;
     } else {
       removeLoader();
-      flipper.classList.add('bounce');
+      flipper.classList.add('slideDown');// Добавляем анимацию движения свеху для центрального блока
     }
   }, 100);
 };

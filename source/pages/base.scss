@@ -118,6 +118,9 @@ a{
 .icon-hamburger{
 	font-size: 2rem;
 }
+.footer__social_link{
+	color: rgb(151, 151, 151);
+}
 /*--------Modal window-----------*/
 #window-modal{
 	position: absolute;
@@ -144,6 +147,7 @@ a{
 	align-items: center;
 	justify-content: center;
 	opacity: .7;
+	transition: .3s;
 }
 .window-modal__item:hover{
 	opacity: 1;
@@ -293,27 +297,53 @@ a{
 	}
 }
 
-.bounce{
-	animation: bounce 1.5s cubic-bezier(.07, .74, .25, .97);
+.slideDown{
+	animation-name: slideDown;
+	-webkit-animation-name: slideDown;
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	visibility: visible !important;
 }
-@keyframes bounce{
+@keyframes slideDown{
 	0%{
-		transform: scale(.3, .3);
+		transform: translateY(-100%);
 	}
-	20%{
-		transform: scale(1.1, 1.1);
+	50%{
+		transform: translateY(8%);
 	}
-	40%{
-		transform: scale(.9, .9);
-	}
-	60%{
-		transform: scale(1.03, 1.03);
+	65%{
+		transform: translateY(-4%);
 	}
 	80%{
-		transform: scale(.97, .97);
+		transform: translateY(4%);
 	}
-	100%{
-		transform: scale(1, 1);
+	95%{
+		transform: translateY(-2%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+@-webkit-keyframes slideDown {
+	0%{
+		-webkit-transform: translateY(-100%);
+	}
+	50%{
+		-webkit-transform: translateY(8%);
+	}
+	65%{
+		-webkit-transform: translateY(-4%);
+	}
+	80%{
+		-webkit-transform: translateY(4%);
+	}
+	95%{
+		-webkit-transform: translateY(-2%);
+	}
+	100% {
+	-webkit-transform: translateY(0%);
 	}
 }
 

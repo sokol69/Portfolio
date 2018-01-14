@@ -97,7 +97,7 @@ input, textarea{
 .works__title_wrap{
 	background: #f9faef;
 	text-align: center;
-	background-image: url(./img/works_header.svg);
+	background-image: url(../../../images/icons/works_header.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center center;
@@ -340,12 +340,12 @@ input, textarea{
 	z-index: 100;
 }
 
-.form__name, .form__email, .form__message{
+#form__name, #form__email, #form__message{
 	margin: 0 .8rem;
 	padding: .8rem;
 }
 
-.form__name, .form__email{
+#form__name, #form__email{
 	height: 3rem;
 }
 
@@ -361,6 +361,7 @@ input, textarea{
 	color: #fff;
 	display: flex;
 	transition: .3s;
+	cursor: pointer;
 }
 
 .form__btn:hover{
@@ -371,7 +372,7 @@ input, textarea{
 	margin: auto;
 }
 
-.btn__send{
+#btn__send{
 	border-right: 1px solid white;
 }
 /*--------Footer-----------*/

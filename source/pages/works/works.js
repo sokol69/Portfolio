@@ -141,3 +141,28 @@ $(document).ready(function(){
     $('body,html').animate({scrollTop: top}, 1500);
   });
 });
+
+/*--------Send Message--------*/
+const name = document.getElementById('form__name'),
+  email = document.getElementById('form__email'),
+  message = document.getElementById('form__message'),
+  btnSend = document.getElementById('btn__send'),
+  btnClear = document.getElementById('btn__clear');
+
+const clearForm = () => {
+  name.value = '';
+  email.value = '';
+  message.value = '';
+};
+
+const sendMessage = () => {
+  if (name.value && email.value && message.value) {
+    alert('Извините, данная форма пока не подключена');
+    clearForm();
+  } else {
+    alert('Пожалуйста, заполните ВСЕ поля');
+  }
+};
+
+btnSend.addEventListener('click', sendMessage);
+btnClear.addEventListener('click', clearForm);

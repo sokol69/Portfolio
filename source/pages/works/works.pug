@@ -7,16 +7,16 @@ block content
 		.container
 			section.section.hero
 				.hero__bg
-					img.hero__bg-img(src=require("../../../images/background/bg.jpg"))
+					img.hero__bg-img(src=require("../../../images/background/bg.jpg") alt="")
 				.hero__sec
-					img.hero__sec-img(src=require("../../../images/icons/portfolio_header.svg"))
+					img.hero__sec-img(src=require("../../../images/icons/portfolio_header.svg") alt="")
 				header.head
 					ul.socials
 						li.socials__item
-							a.socials__link(href='#')
+							a.socials__link(href='https://vk.com/dima33333')
 								span.icon-vk.icon
 						li.socials__item
-							a.socials__link(href='#')
+							a.socials__link(href='https://github.com/sokol69')
 								span.icon-github.icon
 						li.socials__item
 							a.socials__link(href='#')
@@ -25,7 +25,7 @@ block content
 						span.icon-hamburger#hamburger-menu.icon
 				.hero__title
 					.section-title
-						img.section-title__pic(src=require("./img/avag.jpg"))
+						img.section-title__pic(src=require("./img/ava_small.jpg") alt="Аватарка")
 					.hero__user.user
 						h2.user__name Дмитрий Соколов
 						.user__data Личный сайт веб-разработчика
@@ -60,7 +60,7 @@ block content
 									.works-content__site
 										.site__text
 											sapn.icon-link 
-											span Посмотреть сайт
+											a(href="https://github.com/sokol69?tab=repositories") Посмотреть сайт
 							li.slider__item
 								.works-content__left#work-2
 									.works-content__img
@@ -74,7 +74,7 @@ block content
 									.works-content__site
 										.site__text
 											sapn.icon-link 
-											span Посмотреть сайт
+											a(href="https://github.com/sokol69?tab=repositories") Посмотреть сайт
 							li.slider__item
 								.works-content__left#work-3
 									.works-content__img
@@ -88,7 +88,7 @@ block content
 									.works-content__site
 										.site__text
 											sapn.icon-link 
-											span Посмотреть сайт
+											a(href="https://github.com/sokol69?tab=repositories") Посмотреть сайт
 							li.slider__item
 								.works-content__left#work-4
 									.works-content__img
@@ -102,7 +102,7 @@ block content
 									.works-content__site
 										.site__text
 											sapn.icon-link 
-											span Посмотреть сайт
+											a(href="https://github.com/sokol69?tab=repositories") Посмотреть сайт
 					.slider__btn.btn-next
 						span.icon-portf_arrow_down.next#btn__next
 
@@ -113,7 +113,7 @@ block content
 					.rectangle
 				ul.reviews__list
 					li.reviews__item
-						img.reviews__quotes(src=require("./img/quotes.jpg"))
+						img.reviews__quotes(src=require("./img/quotes.jpg") alt="quotes")
 						.reviews__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
 						.reviews__autor
 							img.reviews__ava(src=require("./img/kovalchuk.jpg"), alt="Dmitriy Kovalchuk")
@@ -121,8 +121,8 @@ block content
 								.reviews__name Ковальчук Дмитрий
 								.autor__status основатель Loftschool
 					li.reviews__item
-						img.reviews__quotes(src=require("./img/quotes.jpg"))
-						.reviews__text Этот код выдержит любые испытания. Только пожалуй, не загружается сайт на слишком старых браузерах!
+						img.reviews__quotes(src=require("./img/quotes.jpg") alt="quotes")
+						.reviews__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
 						.reviews__autor
 							img.reviews__ava(src=require("./img/sabancev.jpg"), alt="Vladimir Sabancev")
 							.autor__info
@@ -135,13 +135,13 @@ block content
 							.rectangle
 							.form__title.subtitle Связаться со мной
 							.rectangle
-						input.form__name(type="text" placeholder="Имя")
-						input.form__email(type="text" placeholder="Email")
-						textarea.form__message(name="message", cols="30", rows="10", placeholder="Ваше сообщение")
+						input#form__name(type="text" placeholder="Имя")
+						input#form__email(type="text" placeholder="Email")
+						textarea#form__message(name="message", cols="30", rows="10", placeholder="Ваше сообщение")
 						.reviews__btn
-							.form__btn.btn__send
+							.form__btn#btn__send
 								.btn__text Отправить
-							.form__btn.btn__clear
+							.form__btn#btn__clear
 								.btn__text Очистить
 
 
@@ -162,11 +162,14 @@ block content
 					.footer__social
 							ul.footer__social_list
 								li.footer__social_list_item
-									span.icon-vk_round.icon-round
+									a.footer__social_link(href="https://vk.com/dima33333")
+										span.icon-vk_round.icon-round
 								li.footer__social_list_item
-									span.icon-github_round.icon-round
+									a.footer__social_link(href="https://github.com/sokol69")
+										span.icon-github_round.icon-round
 								li.footer__social_list_item
-									span.icon-in_round.icon-round
+									a.footer__social_link(href="#")
+										span.icon-in_round.icon-round
 			.footer__bottom
 				.footer__bottom_left Я веб-разработчик из Твери и этот сайт я делал в рамках обучения в Школе онлайн образования LoftSchool
 				.footer__bottom_right &copy;Соколов Дмитрий | создано с любовью в loftschool | 2017
