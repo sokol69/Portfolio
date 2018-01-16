@@ -3,9 +3,11 @@ import './index.scss';
 import './style.css';
 import './../base.scss';
 import { setTimeout, setInterval } from 'timers';
+import {removeLoader} from '../../components/preloader/preloader.js';
 
 console.log('in index.js');
 
+/*-----------Авторизация------------*/
 const enterBtn = document.getElementById('btn-enter');
 const login = document.getElementById('login');
 const password = document.getElementById('password');
@@ -37,10 +39,9 @@ const showFlipAnimationReturn = () => {
 singBtn.addEventListener('click', showFlipAnimation);
 returnBtn.addEventListener('click', showFlipAnimationReturn);
 
-/*-------------Preloader----------*/
+/*----------Preloader------------*/
 const showPercent = () => {
   const percentDisplay = document.getElementById('loader__text');
-  const flipper = document.getElementById('flipper');
   let i = 0;
   let timer = setTimeout( function go() {
     if (i <= 100) {
@@ -49,17 +50,9 @@ const showPercent = () => {
       i += 10;
     } else {
       removeLoader();
-      flipper.classList.add('slideDown');// Добавляем анимацию движения свеху для центрального блока
+      flipper.classList.add('slideDown');
     }
   }, 100);
-};
-
-const removeLoader = () => {
-  const loaderArea = document.getElementById('loader__area');
-  loaderArea.style.opacity = '0.1';
-  setTimeout( () => {
-    loaderArea.style.display = 'none';
-  }, 1000);
 };
 
 document.addEventListener('DOMContentLoaded', showPercent);
