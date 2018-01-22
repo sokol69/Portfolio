@@ -55,7 +55,7 @@ input{
 }
 
 #singin__box{
-	display: flex;
+	display: none;
 	width: 11.25rem;
 	height: 3.1rem;
 	border: 1px solid white;
@@ -80,11 +80,13 @@ input{
 	width: 23.75rem;
 	margin: auto;
 	perspective: 1000;
+	-moz-perspective: 1000;
 }
 
 #flipper {
 	transition: 0.6s;
 	transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
 	position: relative;
 	height: 100%;
 	width: 100%;
@@ -106,6 +108,8 @@ input{
 
 .front{
 	backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -119,6 +123,8 @@ input{
 	color: #435460;
 	border-radius: .44rem;
 	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;

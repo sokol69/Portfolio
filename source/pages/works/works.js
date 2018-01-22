@@ -22,8 +22,8 @@ let moveSlide = incr => {
     flag = true;
     position += incr;
     if (position < 0) {
-      position = 300;
-    } else if (position > 300){
+      position = 200;
+    } else if (position > 200){
       position = 0;
     }
     sliderList.style.left = '-' + position + '%';
