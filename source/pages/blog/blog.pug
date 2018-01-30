@@ -6,10 +6,8 @@ block content
 	.wrapper
 		.container
 			section.section.hero
-				.hero__bg
-					img.hero__bg-img(src=require("../../../images/background/bg.jpg"))
 				.hero__sec
-					img.hero__sec-img(src="../../../images/icons/blog_header.svg")
+					img.hero__sec-img(src=require("./img/blog_header.svg") alt="title")
 				header.head
 					ul.socials
 						li.socials__item
@@ -25,7 +23,7 @@ block content
 						span.icon-hamburger#hamburger-menu.icon
 				.hero__title
 					.section-title
-						img.section-title__pic(src=require("./img/ava_small.jpg"))
+						img.section-title__pic(src=require("./img/ava_small.jpg") alt="avatar")
 					.hero__user.user
 						.user__name.title БЛОГ
 						.user__data Статьи, которые я написал
@@ -40,7 +38,7 @@ block content
 								polygon(class="triangle__right" points="1000,0 1000,86 500,86 500,75.5")
 				.content__wrap#content__wrap
 					.sidebar__wrap
-						menu.sidebar#sidebar
+						.sidebar#sidebar
 							ul.sidebar__list
 								li.sidebar__item
 									a.sidebar__link(href='#paper1') Самое важное в SASS

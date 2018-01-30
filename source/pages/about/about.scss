@@ -268,7 +268,7 @@
 	color: rgb(52, 62, 66);
 	width: 22rem;
 	height: 17rem;;
-	background: rgba(255, 255, 255, 0.8);
+	background: rgba(200, 200, 200, 0.8);
 	border-radius: .5rem;
 	max-width: 430px;
 }
@@ -553,4 +553,31 @@
 	.user-desc__image{
 		width: 100%;
 	}
+}
+
+@media screen and (max-height: 380px){
+  html{
+    font-size: 12px;
+  }
+  .map{
+    min-height: 450px;
+  }
+  .contacts{
+		top: 0;
+    left: 50%;
+		transform: translateX(-50%);
+		border-radius: 0;
+    background: #fff;
+	}
+  @media screen and (min-width: 563px){
+    .about{
+      height: 1400px;
+    }
+    .about__left{
+      height: 700px;
+    }
+    .about__right{
+      height: 700px;
+    }
+  }
 }
